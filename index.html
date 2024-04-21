@@ -6,19 +6,22 @@
     <title>Resume Portfolio</title>
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 </head>
 <body>
     <nav>
         <div class="logo">
-            <a href="#">Your Logo</a>
+            <a href="#">RK</a>
         </div>
         <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
+            <input type="checkbox" id="menu-toggle-checkbox">
+            <label for="menu-toggle-checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
         <ul class="menu">
             <li><a href="#home">Home</a></li>
@@ -32,9 +35,19 @@
     
     <section id="home">
         <div class="intro">
-            <h1>Hey, I'm RAVEENDRA KATTUBADI</h1>
-            <p>I am a Front-End Developer</p>
-            <p>Over the past 2 years, I've immersed myself in the world of front-end development with a strong focus on HTML, CSS, JavaScript, Angular, and Bootstrap. My journey includes the successful delivery of various projects, ranging from visually appealing landing pages to interactive intro portfolios and dynamic forms. Rooted in core concepts, I'm driven by a profound passion for continuous learning, ensuring daily growth through the expansion of knowledge and purposeful actions.</p>
+            <h2 id="demo"></h2>
+            <h1 id="name"></h1><br>
+            <h3 id="role"></h3>
+            <p id="description"></p>
+            <div class="icons-buttons-container">
+              <div>
+                <a href="https://github.com/raveendraRS" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:raveendrakattubadi@gmail.com"><i class="fas fa-envelope"></i></a>
+              </div>
+                <div class="buttons " style="padding-top: 20px;">
+                    <button id="downloadResumeBtn" class="btn">Download Resume</button>
+                </div>  
+            </div>
         </div>
     </section>
     
@@ -43,7 +56,7 @@
         <div class="experience-container">
             <h2>Experience</h2>
             <div class="experience-item">
-                <h3>Front-End Developer</h3>
+                <h3 style="color:  #b78080;">Front-End Developer</h3>
                 <p class="company">TCS Company</p>
                 <p class="date">Feb 2022 - Present</p>
                 <ul>
@@ -84,8 +97,7 @@
                 <p>Feel free to get in touch with me to discuss potential collaborations or just to say hello!</p>
                 <div class="social-icons">
                     <a href="https://github.com/raveendraRS" target="_blank"><i class="fab fa-github"></i></a>
-                    <!-- <a href="https://www.facebook.com/yourfacebookusername" target="_blank"><i class="fab fa-facebook"></i></a> -->
-                    <a href="mailto:raveendrakattubadi@gmail.com"><i class="fas fa-envelope"></i></a>
+                   <a href="mailto:raveendrakattubadi@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -94,20 +106,41 @@
     <section id="skills">
         <div class="skills-container">
             <h2>Skills</h2>
-            <div class="skill">
-                <h3>Angular</h3>
-                <div class="skill-bar">
-                    <div class="skill-level web-design">90%</div>
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3>UI Skills</h3>
+                    <div class="skill">
+                        <h4>HTML</h4>
+                        <h4>CSS</h4>
+                        <h4>JavaScript</h4>
+                        <h4>Bootstrap</h4>
+                        <h4>TypeScript</h4>
+                        <h4>Angular</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="skill">
-                <h3>JavaScript </h3>
-                <div class="skill-bar">
-                    <div class="skill-level ui-ux-design">85%</div>
+                <div class="skills-column">
+                    <h3>Backend Skills</h3>
+                    <div class="skill">
+                        <h4>Node.js</h4>
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <h3>Data Base </h3>
+                    <div class="skill">
+                        <h4>SQL</h4>
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <h3>Tools</h3>
+                    <div class="skill">
+                        <h4>Git</h4>
+                        <h4>Postman</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
     
 
 
@@ -130,7 +163,7 @@
                     <input type="text" name="name" placeholder="Your Name">
                     <input type="email" name="email" placeholder="Your Email">
                     <textarea name="message" placeholder="Your Message"></textarea>
-                    <button type="submit">Send</button>
+                    <button type="submit" id="submit" class="btn">Send</button>
                 </form>
             </div>
         </div>
